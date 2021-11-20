@@ -29,6 +29,11 @@ public class ControllerApp implements ActionListener {
                 operationView.changeOperation("suma");
                 operationView.setVisible(true);
                 break;
+            case "resta":
+                operationActive="resta";
+                operationView.changeOperation("resta");
+                operationView.setVisible(true);
+                break;
             case "operation":
                 this.operate();
                 break;

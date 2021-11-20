@@ -12,6 +12,8 @@ public class Calculator {
     private void setOperations(){
         Suma suma = new Suma("suma");
         arrayOperations.add(suma);
+        Resta resta = new Resta("resta");
+        arrayOperations.add(resta);
     }
     public ArrayList<String> getOperations (){
         ArrayList<String> arrayToReturn = new ArrayList<>();
