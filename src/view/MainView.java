@@ -34,7 +34,7 @@ public class MainView extends JFrame {
             button.setActionCommand(arrayOperations.get(i));
             panel.add(button);
         }
-        this.add(panel);
 
+        this.add(panel);
     }
 }

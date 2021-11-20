@@ -26,12 +26,12 @@ public class ControllerApp implements ActionListener {
         switch (e.getActionCommand()){
             case "suma":
                 operationActive="suma";
-                operationView.changeOperation("suma");
+                operationView.changeOperation("SUMA");
                 operationView.setVisible(true);
                 break;
             case "resta":
                 operationActive="resta";
-                operationView.changeOperation("resta");
+                operationView.changeOperation("RESTA");
                 operationView.setVisible(true);
                 break;
             case "operation":

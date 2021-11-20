@@ -3,6 +3,7 @@ package view;
 import controller.ControllerApp;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class OperationView extends JFrame {
@@ -13,9 +14,8 @@ public class OperationView extends JFrame {
     private JLabel frameNameOperation;
     public OperationView (ControllerApp controllerApp){
         gridSystem = new GridSystem(this);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setBackground(Color.BLACK);
-        this.setPreferredSize(new Dimension(400, 700));
+        this.setPreferredSize(new Dimension(300, 400));
         this.initComponents(controllerApp);
         this.pack();
         this.setResizable(false);
@@ -23,28 +23,34 @@ public class OperationView extends JFrame {
     }
     private void initComponents (ControllerApp controllerApp){
         frameNameOperation = new JLabel();
-        this.add(frameNameOperation, gridSystem.insertComponent(0, 0, 1, 1,1,1));
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(7,1,4,20));
+        panel.setBorder(new EmptyBorder(20, 20, 20, 20));
+        panel.add(frameNameOperation, gridSystem.insertComponent(0, 1, 1, 1));
 
         JLabel labelValueA = new JLabel("Por favor ingrese el primer valor");
-        this.add(labelValueA, gridSystem.insertComponent(1, 0, 1, 1,1,1));
+        panel.add(labelValueA);
 
         textFieldA  = new JTextField();
-        this.add(textFieldA, gridSystem.insertComponent(2, 0, 1, 1,1,1));
+        panel.add(textFieldA);
 
-        JLabel labelValueB = new JLabel("Por favor ingrese el valor de B");
-        this.add(labelValueB, gridSystem.insertComponent(3, 0, 1, 1,1,1));
+        JLabel labelValueB = new JLabel("Por favor ingrese el segundo valor");
+        panel.add(labelValueB);
 
         textFieldB = new JTextField();
-        this.add(textFieldB, gridSystem.insertComponent(4, 0, 1, 1,1,1));
+        panel.add(textFieldB);
 
         JButton buttonOperate = new JButton("Operar");
+        buttonOperate.setPreferredSize(new Dimension(100, 40));
         buttonOperate.addActionListener(controllerApp);
         buttonOperate.setActionCommand("operation");
-        this.add(buttonOperate, gridSystem.insertComponent(5, 0, 1, 1,1,1));
+
+        panel.add(buttonOperate);
+        this.add(panel,gridSystem.insertComponent(1,1,1,1));
 
     }
     public void changeOperation(String nameOperation){
-        this.frameNameOperation.setText(nameOperation);
+        this.frameNameOperation.setText("<HTML><CENTER>"+nameOperation+"</CENTER></HTML>");
     }
 
     public String getValueA() {
