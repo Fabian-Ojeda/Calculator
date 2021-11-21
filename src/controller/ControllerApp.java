@@ -43,6 +43,7 @@ public class ControllerApp implements ActionListener {
         }
     }
     private void operate(){
-        JOptionPane.showMessageDialog(null,""+calculator.operate(operationActive, Integer.parseInt(operationView.getValueA()), Integer.parseInt(operationView.getValueB())));
+        JOptionPane.showMessageDialog(null,"La respuesta de la "+operationActive+" es: "+
+                calculator.operate(operationActive, Integer.parseInt(operationView.getValueA()), Integer.parseInt(operationView.getValueB())));
     }
 }
