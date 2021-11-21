@@ -16,4 +16,4 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: mi propio trabajo
-        run: echo "Esta sentencia la escribi yo mismo."
+        run: echo "Esta sentencia la escribi yo mismo, mi nombre es {{ $env.GITHUB_ACTOR }}"
