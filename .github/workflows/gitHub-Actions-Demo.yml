@@ -17,3 +17,4 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: mi propio trabajo
         run: echo "Esta sentencia la escribi yo mismo."
+      - run: echo "$GITHUB_ACTOR fue quien hizo push"
