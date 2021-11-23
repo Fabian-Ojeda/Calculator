@@ -34,9 +34,15 @@ public class ControllerApp implements ActionListener {
                 operationView.changeOperation("RESTA");
                 operationView.setVisible(true);
                 break;
+            case "Multiplicacion":
+                operationActive="Multiplicacion";
+                operationView.changeOperation("MULTIPLICACIÓN");
+                operationView.setVisible(true);
+                break;
             case "operation":
                 this.operate();
                 break;
+
             default:
                 JOptionPane.showMessageDialog(null,"nada");
                 break;

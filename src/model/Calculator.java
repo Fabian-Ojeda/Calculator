@@ -14,6 +14,8 @@ public class Calculator {
         arrayOperations.add(suma);
         Resta resta = new Resta("resta");
         arrayOperations.add(resta);
+        Multiplicacion multiplicacion = new Multiplicacion("Multiplicacion");
+        arrayOperations.add(multiplicacion);
     }
     public ArrayList<String> getOperations (){
         ArrayList<String> arrayToReturn = new ArrayList<>();
